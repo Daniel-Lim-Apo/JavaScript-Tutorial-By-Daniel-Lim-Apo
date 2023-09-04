@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>var</title>
+  </head>
+  <body>
+    LET
+    <br />
+    <p>Watch everyhting in the console.</p>
+    <p>
+      You will get a lot of error messages. You must corret them to go ahead.
+      Read the comments.
+    </p>
+    <script>
+      // NOTE: Constants can be declared in either uppercase or lowercase,
+      // but a common convention is to use uppercase only.
+
+      // Defines MY_FAV as a constant and assigns it the value 7
+      const MY_FAV = 7;
+
+      // This fails but doesn't throw errors in Firefox and Chrome (though it doesn't fail in Safari)
+      MY_FAV = 20;
+
+      // The variable MY_FAV holds the value 7
+      console.log("my favorite number is: " + MY_FAV);
+
+      // Attempting to redeclare the constant will throw an error - Uncaught SyntaxError: Identifier 'MY_FAV' has already been declared
+      const MY_FAV = 20;
+
+      // The name MY_FAV is reserved for the constant above, so this will also fail
+      var MY_FAV = 20;
+
+      // This will fail as well
+      let MY_FAV = 20;
+
+      // It's important to note block scope
+      if (MY_FAV === 7) {
+          // It's okay to do this because it creates a block-scoped variable MY_FAV
+          // with local scope (the name MY_FAV could also be used with let)
+          let MY_FAV = 20;
+
+          // MY_FAV is now 20
+          console.log("my favorite number is " + MY_FAV);
+
+          // This will throw an error as it tries to declare the variable in the global context
+          var MY_FAV = 20;
+      }
+
+      // MY_FAV is still 7
+      console.log('my favorite number is ' + MY_FAV);
+
+      // const must be initialized
+      const FOO; // SyntaxError: missing = in const declaration
+
+      // const also works with objects
+      const MY_OBJECT = {'key':'value'};
+
+      // Overwriting the object will fail (in Firefox and Chrome but not in Safari) - Uncaught TypeError: Assignment to constant variable.
+      MY_OBJECT = {"OTHER_KEY": "value"};
+
+      // However, object attributes are not protected,
+      // so the following statement executes without problems
+      MY_OBJECT.key = "otherValue"; // Use Object.freeze() if you want to make an object immutable
+
+      // The same applies to arrays
+      const MY_ARRAY = [];
+      // You can use push to add items to the array
+      MY_ARRAY.push('A'); //["A"]
+      // However, assigning a new array to the variable generates an error
+      MY_ARRAY = ['B'];
+    </script>
+  </body>
+</html>
