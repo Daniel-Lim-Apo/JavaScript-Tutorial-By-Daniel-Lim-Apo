@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Functions</title>
+  </head>
+  <body>
+    <h1>JavaScript Functions</h1>
+    <p>Using a function as a variable:</p>
+
+    <p id="demo"></p>
+
+    <script>
+      let text = "The temperature is " + toCelsius(77) + " Celsius.";
+      document.getElementById("demo").innerHTML = text;
+
+      function toCelsius(fahrenheit) {
+        return (5 / 9) * (fahrenheit - 32);
+      }
+    </script>
+  </body>
+</html>
