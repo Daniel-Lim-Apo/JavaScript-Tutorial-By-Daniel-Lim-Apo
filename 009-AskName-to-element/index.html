@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript - Tutorial By Daniel Lim-Apo - Ask Name</title>
+  </head>
+  <body>
+    <h1>Ask Name</h1>
+    <button onclick="askName()">Click here</button>
+    <p id="result">Who are you?</p>
+
+    <script>
+      function askName() {
+        let yourName = window.prompt("What is your name? ");
+        let resultElement = document.getElementById("result");
+        resultElement.innerHTML = "Hello, " + yourName + " ! Nice to meet you!";
+      }
+    </script>
+  </body>
+</html>

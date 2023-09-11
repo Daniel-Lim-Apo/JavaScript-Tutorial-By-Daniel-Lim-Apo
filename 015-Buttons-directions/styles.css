@@ -1,0 +1,39 @@
+div#container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* for better viewing */
+body,
+html {
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: white;
+}
+div#container {
+  background-color: #e9e9e9;
+  height: 100%;
+  width: 100%;
+}
+div#container > div {
+  background-color: #57797f;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+.grid {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+div > div {
+  padding: 10px;
+  background-color: #ccc;
+}

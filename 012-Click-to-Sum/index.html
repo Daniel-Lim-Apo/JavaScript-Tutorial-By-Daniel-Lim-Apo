@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript - Tutorial By Daniel Lim-Apo - Ask Name</title>
+  </head>
+  <body>
+    <h1>Calc Sum</h1>
+
+    <button onclick="sum()">Click here to calc</button>
+
+    <p id="result">The result is...</p>
+
+    <script>
+      function sum() {
+        let num1 = Number(window.prompt("Type a number: "));
+        let num2 = Number(window.prompt("Type another number:"));
+        sum = num1 + num2;
+
+        let myResult = document.querySelector("p#result");
+        myResult.innerHTML = `<p>The sum of <mark>${num1}</mark> plus <mark>${num2}</mark> is equal to <strong>${sum}</strong>!</p>`;
+      }
+    </script>
+  </body>
+</html>

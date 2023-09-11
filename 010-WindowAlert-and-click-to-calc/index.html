@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript - Tutorial By Daniel Lim-Apo - Ask Name</title>
+  </head>
+  <body>
+    <h1>Ask Name</h1>
+
+    <input id="number" type="text" name="number" />
+    <button onclick="calc()">Click here to calc</button>
+
+    <p id="result">The result is...</p>
+
+    <script>
+      // It will be automatically shown when the user goes to the site.
+      window.alert("You are here in our site! That's great!");
+
+      // It will be processed when the user clicks.
+      function calc() {
+        let numberEntered = document.getElementById("number").value;
+        let resultElement = document.getElementById("result");
+        resultElement.innerHTML = "The double is " + numberEntered * 2 + " !";
+      }
+    </script>
+  </body>
+</html>

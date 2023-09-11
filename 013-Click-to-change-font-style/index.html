@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript - Tutorial By Daniel Lim-Apo - Change-Style</title>
+  </head>
+  <body>
+    <h1>Change style - font</h1>
+
+    <button onclick="document.getElementById('myP').style.color='red'">
+      Click here to change color to red
+    </button>
+    <button onclick="document.getElementById('myP').style.color='blue'">
+      Click here to change color to blue
+    </button>
+    <button onclick="changeStyleFontSize()">
+      Click here to change font size
+    </button>
+    <p id="myP">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa omnis
+      accusamus saepe temporibus deleniti. Rem temporibus cumque, ipsum
+      laudantium ea dicta nemo ipsa, culpa saepe fugiat totam corporis id qui.
+    </p>
+
+    <script>
+      function changeStyleFontSize() {
+        let myElement = document.querySelector("p#myP");
+        myElement.style.fontSize = "50px";
+      }
+    </script>
+  </body>
+</html>
